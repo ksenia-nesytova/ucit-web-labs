@@ -41,6 +41,23 @@ body {
     }
 }
 
+.btn {
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--color-secondary);
+    }
+
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -65,7 +82,7 @@ body {
 .code-wrapper {
     border-left: 4px solid var(--color-primary);
     background-color: var(--color-surface);
-    padding: 8px 12px;
+    padding:  0.5rem 0.8rem;
 }
 
 .code-block {
