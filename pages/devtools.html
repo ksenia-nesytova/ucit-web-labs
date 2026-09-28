@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчёт Несытовой К.</title>
+    <link rel="stylesheet" href="../styles.css"> 
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+
+</head>
+<body>
+
+    <section class="wrapper">
+        <nav class="page-nav">
+            <a href="../index.html" class="btn">< На главную</a>
+
+            <ul>
+                <li><a href="#requests" class="nav-link">Список запросов</a></li>
+                <li><a href="#geo-context" class="nav-link">GET geo-context</a></li>
+                <li><a href="#graphql" class="nav-link">POST GraphQL</a></li>
+                <li><a href="#statistics" class="nav-link">POST statistics</a></li>
+            </ul>
+        </nav>
+        <h1>Инструменты разработчика Chrome (вкладка Network)</h1>
+        <article class="card">
+            <h2 id="requests">Список запросов</h2>
+            <img src="../assets/devtools/00-network-list.png" alt="Список запросов">
+        </article>
+        <article class="card">
+            <h2  id="geo-context">GET pogoda.ngs.ru/geo-context</h2>
+
+            <h3>Заголовки ответа</h3>
+            <img src="../assets/devtools/geo-context-01-response.png" alt="Response headers"> 
+            <hr>
+
+            <h3>Заголовки запроса</h3>
+            <img src="../assets/devtools/geo-context-02-request.png" alt="Request headers">
+            <hr>
+
+            <h3>Содержимое ответа</h3>
+            <img src="../assets/devtools/geo-context-03-preview.png" alt="Response preview">
+        </article>
+        <article class="card">
+            <h2 id="graphql">POST pogoda.ngs.ru/ump-api/service-scrooge/graphql</h2>
+
+            <h3>Заголовки ответа</h3>
+            <img src="../assets/devtools/graphql-01-response.png" alt="Response headers">
+            <hr>
+
+            <h3>Заголовки запроса</h3>
+            <img src="../assets/devtools/graphql-02-request.png" alt="Request headers">
+            <hr>
+
+            <h3>Содержимое ответа</h3>
+            <img src="../assets/devtools/graphql-03-preview.png" alt="Response preview">
+        </article>
+        <article class="card">
+            <h2 id="statistics">POST pogoda.ngs.ru/statistics/json</h2>
+
+            <h3>Заголовки ответа</h3>
+            <img src="../assets/devtools/statistics-01-response.png" alt="Response headers">
+            <hr>
+
+            <h3>Заголовки запроса</h3>
+            <img src="../assets/devtools/statistics-02-request.png" alt="Request headers">
+            <hr>
+
+            <h3>Содержимое ответа</h3>
+            <img src="../assets/devtools/statistics-03-preview.png" alt="Response preview">
+        </article>
+    </section>
+</body>
