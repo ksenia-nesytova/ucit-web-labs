@@ -27,18 +27,28 @@ body {
 }
 
 .nav-link {
-    cursor: pointer;
     color: var(--color-secondary);
+    text-decoration: none;
+}
 
-    &:hover,
-    &:focus,
-    &:active {
-        color: var(--color-primary);
-    }
+.nav-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
 
-    &:visited {
-        color: var(--color-primary);
-    }
+.nav-link:focus-visible {
+    color: var(--color-primary);
+    text-decoration: underline;
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 3px;
+}
+
+.nav-link:active {
+    color: var(--color-primary);
+}
+
+.nav-link:visited {
+    color: var(--color-secondary);
 }
 
 .btn {
