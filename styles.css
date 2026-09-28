@@ -14,6 +14,9 @@
     margin: 0;
   }
 
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
 
 
 body {
@@ -24,6 +27,16 @@ body {
 
     color: var(--color-primary);
     background-color: var(--color-bg);
+
+    @media (max-width: 600px) {
+        padding: 0 .5rem;
+        margin: .5rem 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .nav-link {
@@ -99,6 +112,17 @@ body {
     gap: 1.5rem;
 
     padding: 1rem 1.2rem;
+
+    @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+    }
 }
 
 .code-wrapper {
@@ -114,6 +138,9 @@ body {
     border-radius: var(--border-radius);
     background-color: var(--color-text);
     color: var(--color-secondary);
+
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 
