@@ -29,27 +29,29 @@ body {
 .nav-link {
     color: var(--color-secondary);
     text-decoration: none;
+
+    &:hover,
+    &:focus-visible, 
+    &:active {
+        color: var(--color-primary);
+    }
+
+    &:hover,
+    &:focus-visible  {
+        text-decoration: underline;
+    }
+    
+    &:focus-visible {
+        outline: 2px solid var(--color-secondary);
+        outline-offset: 3px;
+    }
+       
+    &:visited {
+        color: var(--color-secondary);
+    }
 }
 
-.nav-link:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-}
 
-.nav-link:focus-visible {
-    color: var(--color-primary);
-    text-decoration: underline;
-    outline: 2px solid var(--color-secondary);
-    outline-offset: 3px;
-}
-
-.nav-link:active {
-    color: var(--color-primary);
-}
-
-.nav-link:visited {
-    color: var(--color-secondary);
-}
 
 .btn {
     display: inline-block;
