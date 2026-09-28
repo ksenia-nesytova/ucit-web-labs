@@ -122,3 +122,8 @@ body {
     flex-direction: column;
     gap: .25rem;
   }
+
+  dfn {
+    font-weight: 700;
+    font-style: normal;
+}
