@@ -58,6 +58,16 @@ body {
 
 }
 
+.page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--color-border);
+    padding: .5rem 0;
+
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
