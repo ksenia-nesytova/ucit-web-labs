@@ -101,6 +101,7 @@ body {
     padding-left: 1rem;
     border-radius: var(--border-radius);
     background-color: var(--color-text);
+    color: var(--color-secondary);
 }
 
 
