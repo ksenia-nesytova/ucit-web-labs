@@ -26,6 +26,17 @@ const period = document.getElementById('period');
 const result = document.getElementById('result');
 
 type.addEventListener('change', () => {
+    updatePeriods();
+});
+
+
+form.addEventListener('submit', (event) => { 
+    event.preventDefault();
+    calculateFinalDeposit();
+})
+
+
+function updatePeriods() { 
     const currentType = type.value;
 
     period.innerHTML = '';
@@ -38,27 +49,26 @@ type.addEventListener('change', () => {
 
         period.appendChild(option);
     });
-});
+}
 
+function getCurrentDeposit(type, period) {
+    return deposits[type]
+        .find((deposit) => deposit.period === period);
+}
 
-form.addEventListener('submit', (event) => { 
-    event.preventDefault();
-
+function calculateFinalDeposit() { 
     const currentType = type.value;
     const currentPeriod = period.value;
+    const selectedDeposit = getCurrentDeposit(
+        currentType,
+        currentPeriod
+    );
+
     const amount = Number(document.getElementById('amount').value);
-
-    const selectedDeposit = deposits[currentType]
-        .find((deposit) => deposit.period === currentPeriod);
-
     const rate = selectedDeposit.rate;
     const finalAmount = amount + (amount * rate / 100);
 
     result.innerHTML = `
-    <p>Вклад ${currentType} на срок ${currentPeriod} на сумму ${amount}.
+    <p>Вклад "${depositNames[currentType]}" на срок ${currentPeriod} на сумму ${amount}.
     <p>Итоговая сумма: ${finalAmount}</p>`;
-})
-
-
-
-
+}
