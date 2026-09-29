@@ -168,8 +168,7 @@ img {
 
 
 .form {
-    max-width: 600px;
-    flex-grow: 1;
+    width: 600px;
 
     padding: 1.5rem;
     background-color: var(--color-bg);
@@ -240,6 +239,8 @@ img {
 .calc-info-wrapper {
     justify-content: center;
     align-items: center; 
+    flex-grow: 1;
+    text-align: center;
 }
 
 .calc-info {
