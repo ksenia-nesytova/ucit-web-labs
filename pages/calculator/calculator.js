@@ -24,8 +24,12 @@ const type = document.getElementById('type');
 const period = document.getElementById('period');
 const result = document.getElementById('result');
 
-const depositInfo = document.getElementById('deposit-info');
+const depositType = document.getElementById('deposit-type');
+const depositPeriod = document.getElementById('deposit-period');
+const depositAmount = document.getElementById('deposit-amount');
+const depositRate = document.getElementById('deposit-rate');
 const depositTotal = document.getElementById('deposit-total');
+
 
 function updatePeriods() { 
     const currentType = type.value;
@@ -61,11 +65,19 @@ function calculateFinalDeposit() {
 
     result.classList.remove('hidden');
 
-    depositInfo.textContent =
-        `Вклад "${depositNames[currentType]}" на срок ${currentPeriod} на сумму ${amount.toLocaleString("ru-RU", {style: 'currency', currency:'RUB'})}.`;
+    depositType.textContent = depositNames[currentType];
+    depositPeriod.textContent = currentPeriod;
+    depositAmount.textContent = amount.toLocaleString("ru-RU", {
+        style: "currency",
+        currency: "RUB"
+    });
 
-    depositTotal.textContent =
-        `Итоговая сумма: ${finalAmount.toLocaleString("ru-RU", {style: 'currency', currency:'RUB'})}.`;
+    depositRate.textContent = `${rate}%`;
+
+    depositTotal.textContent = finalAmount.toLocaleString("ru-RU", {
+        style: "currency",
+        currency: "RUB"
+    });
 }
 
 // Event Listeners
