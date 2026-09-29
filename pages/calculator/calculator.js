@@ -14,7 +14,6 @@ const deposits = {
         { period: "2 года", rate: 15 }
     ]
 };
-
 const depositNames = {
     replenishable: "Пополняемый",
     fixed: "Срочный"
@@ -24,16 +23,6 @@ const form = document.getElementById('form');
 const type = document.getElementById('type');
 const period = document.getElementById('period');
 const result = document.getElementById('result');
-
-type.addEventListener('change', () => {
-    updatePeriods();
-});
-
-
-form.addEventListener('submit', (event) => { 
-    event.preventDefault();
-    calculateFinalDeposit();
-})
 
 
 function updatePeriods() { 
@@ -73,4 +62,16 @@ function calculateFinalDeposit() {
     <p>Итоговая сумма: ${finalAmount} руб</p>`;
 }
 
+// Event Listeners
+type.addEventListener('change', () => {
+    updatePeriods();
+});
+
+
+form.addEventListener('submit', (event) => { 
+    event.preventDefault();
+    calculateFinalDeposit();
+})
+
+// Init
 updatePeriods();
