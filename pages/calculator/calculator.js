@@ -36,5 +36,24 @@ type.addEventListener('change', () => {
 });
 
 
+form.addEventListener('submit', (event) => { 
+    event.preventDefault();
+
+    const currentType = type.value;
+    const currentPeriod = period.value;
+    const amount = Number(document.getElementById('amount').value);
+
+    const selectedDeposit = deposits[currentType]
+        .find((deposit) => deposit.period === currentPeriod);
+
+    const rate = selectedDeposit.rate;
+    const finalAmount = amount + (amount * rate / 100);
+
+    result.innerHTML = `
+    <p>Вклад ${currentType} на срок ${currentPeriod} на сумму ${amount}.
+    <p>Итоговая сумма: ${finalAmount}</p>`;
+})
+
+
 
 
