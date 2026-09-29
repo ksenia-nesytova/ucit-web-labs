@@ -17,7 +17,7 @@
         </nav>
         <h1>Калькулятор вкладов</h1>
 
-        <div class="card calculator-wrapper">
+        <div class="calculator-wrapper">
             <form class="card form" id="form">
                 <div class="form-field">
                     <label for="type">Вид вклада</label>
@@ -59,10 +59,20 @@
                 <input type="submit" value="Рассчитать" class="btn submit-button">
             </form>
 
-
             <div class="card hidden calc-info-wrapper" id="result">
-                <p id="deposit-info" class="calc-info"></p>
-                <p id="deposit-total" class="calc-info"></p>
+                <p>
+                    Вклад "<strong id="deposit-type"></strong>" 
+                    на срок <strong id="deposit-period"></strong> 
+                    на сумму <strong id="deposit-amount"></strong>.
+                </p>
+            
+                <p>
+                    Процентная ставка: <strong id="deposit-rate"></strong>.
+                </p>
+            
+                <p>
+                    Итоговая сумма: <strong id="deposit-total"></strong>.
+                </p>
             </div>
         </div>
 
