@@ -64,8 +64,6 @@ img {
     }
 }
 
-
-
 .btn {
     display: inline-block;
     padding: 0.5rem 0.8rem;
@@ -171,6 +169,7 @@ img {
 
 .form {
     max-width: 600px;
+    flex-grow: 1;
 
     padding: 1.5rem;
     background-color: var(--color-bg);
@@ -229,6 +228,22 @@ img {
     padding: .6rem 1.2rem;
     border: none;
     cursor: pointer;
+}
+
+
+.calculator-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.calc-info-wrapper {
+    justify-content: center;
+    align-items: center; 
+}
+
+.calc-info {
+    font-size: 1.2rem;
 }
 
 .hidden {
