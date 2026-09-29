@@ -24,6 +24,8 @@ const type = document.getElementById('type');
 const period = document.getElementById('period');
 const result = document.getElementById('result');
 
+const depositInfo = document.getElementById('deposit-info');
+const depositTotal = document.getElementById('deposit-total');
 
 function updatePeriods() { 
     const currentType = type.value;
@@ -59,9 +61,11 @@ function calculateFinalDeposit() {
 
     result.classList.remove('hidden');
 
-    result.innerHTML = `
-    <p>Вклад "${depositNames[currentType]}" на срок ${currentPeriod} на сумму ${amount} руб.</p>
-    <p>Итоговая сумма: ${finalAmount} руб</p>`;
+    depositInfo.textContent =
+        `Вклад "${depositNames[currentType]}" на срок ${currentPeriod} на сумму ${amount.toLocaleString("ru-RU", {style: 'currency', currency:'RUB'})}.`;
+
+    depositTotal.textContent =
+        `Итоговая сумма: ${finalAmount.toLocaleString("ru-RU", {style: 'currency', currency:'RUB'})}.`;
 }
 
 // Event Listeners
