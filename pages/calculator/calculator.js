@@ -15,6 +15,11 @@ const deposits = {
     ]
 };
 
+const depositNames = {
+    replenishable: "Пополняемый",
+    fixed: "Срочный"
+};
+
 const form = document.getElementById('form');
 const type = document.getElementById('type');
 const period = document.getElementById('period');
