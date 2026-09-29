@@ -15,4 +15,11 @@ const deposits = {
     ]
 };
 
+const form = document.getElementById('calculator');
+const type = document.getElementById('type');
+const period = document.getElementById('period');
+const result = document.getElementById('result');
+
+
+
 
