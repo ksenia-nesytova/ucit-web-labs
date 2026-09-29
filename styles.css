@@ -228,25 +228,3 @@ img {
     border: none;
     cursor: pointer;
 }
-
-
-.calculator-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
-
-.calc-info-wrapper {
-    justify-content: center;
-    align-items: center; 
-    flex-grow: 1;
-    text-align: center;
-}
-
-.calc-info {
-    font-size: 1.2rem;
-}
-
-.hidden {
-    display: none;
-}
