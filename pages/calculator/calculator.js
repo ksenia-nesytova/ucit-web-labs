@@ -72,3 +72,5 @@ function calculateFinalDeposit() {
     <p>Вклад "${depositNames[currentType]}" на срок ${currentPeriod} на сумму ${amount} руб.</p>
     <p>Итоговая сумма: ${finalAmount} руб</p>`;
 }
+
+updatePeriods();
