@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчёт Несытовой К.</title>
+    <link rel="stylesheet" href="../styles.css"> 
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+
+</head>
+<body>
+
+    <section class="wrapper">
+        <nav class="page-nav">
+            <a href="../../index.html" class="btn">На главную</a>
+        </nav>
+        <h1>Калькулятор вкладов</h1>
+
+        <form action="" method="post" class="card form">
+            <div class="form-field">
+                <label for="type">Вид вклада</label>
+                <select id="type" name="type">
+                    <option value="replenishable">
+                        Пополняемый
+                    </option>
+                    <option value="fixed">
+                        Срочный
+                    </option>
+                </select>
+            </div>
+        
+            <div class="form-field">
+                <label for="period">Срок вклада:</label>
+                <select name="period" id="period">           
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="amount">Сумма вклада:</label>
+                <input type="number" id="amount" name="amount" min="0">
+            </div>
+        
+            <input type="submit" value="Рассчитать" class="btn submit-button">
+        </form>
+
+
+        <div class="deposit-result">
+
+        </div>
+
+    </section>
+<script src="calculator.js"></script>
+</body>
+
+</html>
