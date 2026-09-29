@@ -20,6 +20,21 @@ const type = document.getElementById('type');
 const period = document.getElementById('period');
 const result = document.getElementById('result');
 
+type.addEventListener('change', () => {
+    const currentType = type.value;
+
+    period.innerHTML = '';
+
+    deposits[currentType].forEach(deposit => {
+        const option = document.createElement('option');
+
+        option.textContent = deposit.period;
+        option.value = deposit.period;
+
+        period.appendChild(option);
+    });
+});
+
 
 
 
