@@ -17,51 +17,52 @@
         </nav>
         <h1>Калькулятор вкладов</h1>
 
-        <form class="card form" id="form">
-            <div class="form-field">
-                <label for="type">Вид вклада</label>
-                <select 
-                id="type" 
-                name="type" 
-                placeholder="Вид вклада"
-                required>
-                    <option value="replenishable">
-                        Пополняемый
-                    </option>
-                    <option value="fixed">
-                        Срочный
-                    </option>
-                </select>
-            </div>
-        
-            <div class="form-field">
-                <label for="period">Срок вклада:</label>
-                <select 
-                    id="period"
-                    name="period"
-                    placeholder="Срок вклада"
-                    required>           
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="amount">Сумма вклада:</label>
-                <input 
-                    type="number"
-                    id="amount"
-                    name="amount"
-                    placeholder="Сумма, руб"
-                    min="0"
-                    step="100"
+        <div class="card calculator-wrapper">
+            <form class="card form" id="form">
+                <div class="form-field">
+                    <label for="type">Вид вклада</label>
+                    <select 
+                    id="type" 
+                    name="type" 
+                    placeholder="Вид вклада"
                     required>
+                        <option value="replenishable">
+                            Пополняемый
+                        </option>
+                        <option value="fixed">
+                            Срочный
+                        </option>
+                    </select>
+                </div>
+            
+                <div class="form-field">
+                    <label for="period">Срок вклада:</label>
+                    <select 
+                        id="period"
+                        name="period"
+                        placeholder="Срок вклада"
+                        required>           
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="amount">Сумма вклада:</label>
+                    <input 
+                        type="number"
+                        id="amount"
+                        name="amount"
+                        placeholder="Сумма, руб"
+                        min="0"
+                        required>
+                </div>
+            
+                <input type="submit" value="Рассчитать" class="btn submit-button">
+            </form>
+
+
+            <div class="card hidden" id="result">
+
             </div>
-        
-            <input type="submit" value="Рассчитать" class="btn submit-button">
-        </form>
-
-
-        <div class="card" id="result">
-
         </div>
 
     </section>
