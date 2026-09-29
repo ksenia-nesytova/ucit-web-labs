@@ -69,6 +69,6 @@ function calculateFinalDeposit() {
     const finalAmount = amount + (amount * rate / 100);
 
     result.innerHTML = `
-    <p>Вклад "${depositNames[currentType]}" на срок ${currentPeriod} на сумму ${amount}.</p>
-    <p>Итоговая сумма: ${finalAmount}</p>`;
+    <p>Вклад "${depositNames[currentType]}" на срок ${currentPeriod} на сумму ${amount} руб.</p>
+    <p>Итоговая сумма: ${finalAmount} руб</p>`;
 }
