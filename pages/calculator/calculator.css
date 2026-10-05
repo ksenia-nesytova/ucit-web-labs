@@ -1,8 +1,18 @@
+.form {
+    @media (max-width: 800px) {
+        flex-shrink: 1;
+    }
+}
 
 .calc-wrapper {
     display: flex;
     flex-direction: row;
     gap: 16px;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .calc-info-wrapper {
@@ -10,6 +20,12 @@
     align-items: center; 
     flex-grow: 1;
     text-align: center;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        padding: 2rem;
+        padding: 1rem 1.2rem;
+    }
 }
 
 .calc-info {
