@@ -36,6 +36,10 @@ function updatePeriods() {
 
     period.innerHTML = '';
 
+    if (!currentType) {
+        return;
+    }
+
     deposits[currentType].forEach(deposit => {
         const option = document.createElement('option');
 
