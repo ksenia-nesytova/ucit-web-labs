@@ -37,8 +37,11 @@ function updatePeriods() {
     period.innerHTML = '';
 
     if (!currentType) {
+        period.disabled = true;
         return;
     }
+
+    period.disabled = false;
 
     deposits[currentType].forEach(deposit => {
         const option = document.createElement('option');
