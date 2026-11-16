@@ -66,6 +66,11 @@ function calculateFinalDeposit() {
     );
 
     const amount = Number(document.getElementById('amount').value);
+
+    if (!selectedDeposit || !Number.isFinite(amount) || amount <= 0) {
+        return;
+    }
+
     const rate = selectedDeposit.rate;
     const finalAmount = amount + (amount * rate / 100);
 
@@ -86,14 +91,26 @@ function calculateFinalDeposit() {
     });
 }
 
+function hideResult() {
+    result.classList.add('hidden');
+}
+
 // Event Listeners
 type.addEventListener('change', () => {
     updatePeriods();
+    hideResult();
 });
 
+period.addEventListener('change', hideResult);
+amount.addEventListener('input', hideResult);
 
 form.addEventListener('submit', (event) => { 
     event.preventDefault();
+
+    if (!form.reportValidity()) {
+        return;
+    }
+
     calculateFinalDeposit();
 })
 
