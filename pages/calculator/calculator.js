@@ -31,10 +31,14 @@ const depositRate = document.getElementById('deposit-rate');
 const depositTotal = document.getElementById('deposit-total');
 
 
-function updatePeriods() { 
+function updatePeriods() {
     const currentType = type.value;
 
-    period.innerHTML = '';
+    period.replaceChildren();
+
+    const placeholder = new Option('Необходимо выбрать срок вклада', '', true, true);
+    placeholder.disabled = true;
+    period.appendChild(placeholder);
 
     if (!currentType) {
         period.disabled = true;
@@ -44,12 +48,7 @@ function updatePeriods() {
     period.disabled = false;
 
     deposits[currentType].forEach(deposit => {
-        const option = document.createElement('option');
-
-        option.textContent = deposit.period;
-        option.value = deposit.period;
-
-        period.appendChild(option);
+        period.add(new Option(deposit.period, deposit.period));
     });
 }
 
