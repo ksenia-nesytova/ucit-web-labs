@@ -201,6 +201,12 @@ img {
         outline-offset: 2px;
     }
 
+    select:disabled,
+    input:disabled {
+      background-color: var(--color-border);
+      cursor: not-allowed;
+    }
+
     select::picker(select) {
         background-color: var(--color-surface);
         border: 1px solid var(--color-border);
@@ -217,12 +223,6 @@ img {
         background: var(--color-secondary);
         color: var(--color-text);
         font-weight: bold;
-      }
-
-      select:disabled,
-      input:disabled {
-        background-color: var(--color-border);
-        cursor: not-allowed;
       }
 }
 
