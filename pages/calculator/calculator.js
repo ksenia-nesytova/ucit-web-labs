@@ -36,7 +36,7 @@ function updatePeriods() {
 
     period.replaceChildren();
 
-    const placeholder = new Option('Необходимо выбрать срок вклада', '', true, true);
+    const placeholder = new Option('Выберите срок вклада', '', true, true);
     placeholder.disabled = true;
     period.appendChild(placeholder);
 
