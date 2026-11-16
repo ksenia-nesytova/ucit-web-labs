@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчёт Несытовой К.</title>
+    <link rel="stylesheet" href="../../styles.css"> 
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+</head>
+    <body>
+        <section class="wrapper">
+            <nav class="page-nav">
+                <a href="../../index.html" class="btn">На главную</a>
+            </nav>
+
+            <article>
+                <form action="" class="card form" id="form">
+                    <div class="form-field">
+                        <label for="city">Город:</label>
+                        <input 
+                            type="text" 
+                            id="city"
+                            name="city"
+                            placeholder="Город"
+                            required>           
+                        </input>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="query">Искать:</label>
+                        <input 
+                            type="text" 
+                            id="query"
+                            name="query"
+                            placeholder="Название вакансии или ключевые слова"
+                            required>           
+                        </input>
+                    </div>
+
+                    <input type="submit" value="Найти вакансии" class="btn submit-button">
+                </form>
+            </article>
+        </section>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="./hh-widget.js"></script>
+</html>
