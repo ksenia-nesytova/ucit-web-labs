@@ -23,25 +23,22 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    @media (max-width: 800px) { 
-      height: calc(var(--swiper-navigation-size) * 0.75) !important;
-      width: calc(var(--swiper-navigation-size) * 0.75) !important;
-  }
+    @media (max-width: 800px) {
+        height: calc(var(--swiper-navigation-size) * 0.75) !important;
+        width: calc(var(--swiper-navigation-size) * 0.75) !important;
+    }
+
+    &:hover {
+        transform: scale(1.08);
+        color: var(--color-secondary);
+    }
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover,
-.swiper-pagination-bullet:hover {
-    transform: scale(1.08);
-}
-    
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  color: var(--color-secondary);
-}
-
-.swiper-pagination-bullet:hover {
-  background: var(--color-secondary);
+.swiper-pagination-bullet {
+    &:hover {
+        transform: scale(1.08);
+        background: var(--color-secondary);
+    }
 }
 
 .swiper-button-prev,
