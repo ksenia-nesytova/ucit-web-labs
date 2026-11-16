@@ -1,19 +1,20 @@
 const deposits = {
     replenishable: [
-        { period: "6 месяцев", rate: 20 },
-        { period: "1 год", rate: 22 },
-        { period: "1,5 года", rate: 15 },
-        { period: "2 года", rate: 10 }
+        { period: '6 месяцев', months: 6, rate: 20 },
+        { period: '1 год', months: 12, rate: 22 },
+        { period: '1,5 года', months: 18, rate: 15 },
+        { period: '2 года', months: 24, rate: 10 },
     ],
     fixed: [
-        { period: "3 месяца", rate: 20 },
-        { period: "6 месяцев", rate: 22 },
-        { period: "9 месяцев", rate: 23 },
-        { period: "1 год", rate: 24 },
-        { period: "1,5 года", rate: 18 },
-        { period: "2 года", rate: 15 }
-    ]
+        { period: '3 месяца', months: 3, rate: 20 },
+        { period: '6 месяцев', months: 6, rate: 22 },
+        { period: '9 месяцев', months: 9, rate: 23 },
+        { period: '1 год', months: 12, rate: 24 },
+        { period: '1,5 года', months: 18, rate: 18 },
+        { period: '2 года', months: 24, rate: 15 },
+    ],
 };
+
 const depositNames = {
     replenishable: "Пополняемый",
     fixed: "Срочный"
@@ -64,15 +65,14 @@ function calculateFinalDeposit() {
         currentType,
         currentPeriod
     );
-
     const amount = Number(document.getElementById('amount').value);
 
     if (!selectedDeposit || !Number.isFinite(amount) || amount <= 0) {
         return;
     }
 
-    const rate = selectedDeposit.rate;
-    const finalAmount = amount + (amount * rate / 100);
+    const { rate, months } = selectedDeposit;
+    const finalAmount = amount * (1 + (rate / 100) * (months / 12));
 
     result.classList.remove('hidden');
 
